@@ -69,11 +69,11 @@ def main():
     print(f"Resolved {TARGET_HANDLE} to DID: {target_did}")
     
     # Fetch the followers using client.get_followers
-    #followers = get_followers(client, target_did)
-    #print(f"Found {len(followers)} followers for {TARGET_HANDLE}")
+    followers = get_followers(client, target_did)
+    print(f"Found {len(followers)} followers for {TARGET_HANDLE}")
 
     # Save followers to disk
-    #save_followers_to_disk(followers, FOLLOWERS_FILE)
+    save_followers_to_disk(followers, FOLLOWERS_FILE)
 
     # Load followers from disk
     followers = load_followers_from_disk(FOLLOWERS_FILE)
